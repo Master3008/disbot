@@ -9,7 +9,7 @@ async def on_member_update(before, after):
     if str(before.status) == "offline":
         if str(after.status) == "online":
             print("{} is now {}.".format(after.name,after.status))
-            file = open('log.txt','a') 
+            file = open('log.txt','a+') 
             currentDT = datetime.datetime.now()
             
             file.write("{} is now {}.       ".format(after.name,after.status))
