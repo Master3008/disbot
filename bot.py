@@ -4,7 +4,11 @@ import os
 client = discord.Client()
 @client.event
 
-
+i = 1
+while i < 6:
+  print(i)
+  
+    
 async def on_member_update(before, after):
     if str(before.status) == "offline":
         if str(after.status) == "online":
